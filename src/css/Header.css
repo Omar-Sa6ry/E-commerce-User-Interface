@@ -1,0 +1,255 @@
+a {
+  display: inline-block;
+}
+.navbar {
+  overflow: hidden;
+}
+.nav-background {
+  color: var(--white);
+  background-color: var(--dark-blue);
+}
+
+.top-nav {
+  justify-content: space-around;
+  border-top-right-radius: 6px;
+  padding: 12px 20px 5px;
+  border-top-left-radius: 6px;
+  margin: 0px auto 0px;
+  align-items: center;
+  display: flex;
+  border-bottom: 0.1px solid var(--border-nav);
+}
+.bottom-nav {
+  display: flex;
+  border-bottom-right-radius: 6px;
+  padding: 12px 20px 5px;
+  border-bottom-left-radius: 6px;
+  border-top: 0.1px solid var(--border-nav);
+}
+nav ul li i {
+  cursor: pointer;
+  display: flex !important;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  color: var(--white);
+}
+.navbar .row ul li a svg {
+  display: flex;
+  justify-content: center;
+  width: 38px;
+  align-items: center;
+  height: 38px;
+  margin: auto 10px;
+}
+
+/* a fancy bg for showing background and border when focus. */
+.fancy-bg {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  background: var(--input-bg-color);
+  border-radius: 30px;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  box-shadow: var(--color-black) 0px 1px 4px;
+}
+/* label styling */
+label {
+  width: 100%;
+  padding: 0.8em;
+  height: 40px;
+  padding-inline: var(--inline-padding-of-input);
+  display: flex;
+  align-items: center;
+}
+
+.search,
+.close-btn {
+  position: absolute;
+}
+/* styling search-icon */
+.search {
+  fill: var(--text-color);
+  left: var(--inline-padding-of-input);
+}
+
+/* styling of input */
+.input-s {
+  color: var(--input-text-color);
+  width: 100%;
+  margin-inline: min(2em, calc(var(--inline-padding-of-input) + var(--gap)));
+  background: none;
+  border: none;
+}
+
+.input-s:focus {
+  outline: none;
+}
+
+.input-s::placeholder {
+  color: var(--text-color);
+}
+/* input background change in focus */
+.input-s:focus ~ .fancy-bg {
+  border: 1px solid var(--active-color);
+  background: var(--focus-input-bg-color);
+}
+/* search icon color change in focus */
+.input-s:focus ~ .search {
+  fill: var(--active-color);
+}
+/* showing close button when typing */
+.input-s:valid ~ .close-btn {
+  opacity: 1;
+  visibility: visible;
+}
+/* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: 'color 9999s ease-out, background-color 9999s ease-out';
+  -webkit-transition-delay: 9999s;
+}
+
+.radio-input {
+  display: flex;
+  flex-direction: row;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-white);
+  width: fit-content;
+  padding-left: 13px;
+}
+.radio-input a {
+  text-transform: uppercase;
+}
+.radio-input input[type='radio'] {
+  display: none;
+}
+
+.radio-input label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.nav-link p {
+  display: contents;
+  color: var(--color-white);
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover,
+.radio-input a {
+  color: var(--active-color);
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: inherit;
+}
+ul.navbar-nav li {
+  width: 33.333%;
+  color: var(--color-white);
+}
+ul.navbar-nav li:hover,
+ul.navbar-nav li:hover .nav-link p {
+  color: var(--active-color);
+}
+ul.navbar-nav li:hover span {
+  color: var(--background-nav) !important;
+  background-color: var(--active-color) !important;
+}
+.navbar p {
+  color: var(--color-white);
+}
+.nav-background {
+  overflow: visible;
+}
+.dropdown {
+  border-right: 0.1px solid var(--border-nav);
+}
+.dropdown-t:hover {
+  background-color: var(--active-color) !important;
+  color: var(--background-nav) !important;
+}
+.dropdown-t {
+  background-color: var(--input-bg-color) !important;
+  height: 100%;
+  border-radius: 10px;
+  color: var(--active-color) !important;
+  box-shadow: var(--color-black) 0px 1px 4px;
+  border: 1px solid var(--border-nav) !important;
+}
+.nav-background .dropdown ul {
+  background-color: var(--background-nav);
+  margin-top: 0;
+  width: fit-content;
+  color: var(--color-white);
+  left: 33px;
+}
+.dropdown-item {
+  padding: var(--bs-dropdown-item-padding-y) 10px;
+  color: var(--color-white) !important;
+}
+.dropdown-item:hover {
+  background-color: var(--bs-dropdown-header-color);
+  color: var(--color-white) !important;
+  border-radius: 10px;
+}
+
+.dropdown-item:focus,
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--active-color);
+  color: var(--background-nav) !important;
+  border-radius: 10px;
+}
+.logoutL .logoutB {
+  background-color: transparent;
+  font-weight: bold;
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #dc3545;
+}
+.logoutL {
+  justify-content: end;
+  position: relative;
+  left: 100%;
+}
+.navbar .form-control {
+  color: var(--color-white);
+  background-color: transparent;
+  border-color: #1b9bee;
+  box-shadow: none;
+}
+.navbar .form-control:focus {
+  box-shadow: 0 0 0 2px #35afff4a;
+}
+.navbar .form-control::placeholder {
+  color: #707070;
+}
+.rbt-menu {
+  border-radius: 20px;
+  background-color: var(--background-nav) !important;
+}
+.rbt-input-main {
+  border-radius: 20px;
+}
+.navbar-brand:focus,
+.navbar-brand:hover,
+.radio-input a {
+  color: var(--active-color) !important;
+}

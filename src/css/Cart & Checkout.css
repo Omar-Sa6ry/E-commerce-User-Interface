@@ -1,0 +1,144 @@
+/* cart */
+.cart-head,
+.cart-data {
+  border-bottom: 1px solid #eaeaea;
+}
+.cart-data {
+  background-color: var(--color-white);
+  padding: 0 20px;
+}
+.cart-head tr h4 {
+  color: var(--gray-color);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.cart-col-1 {
+  width: 40%;
+}
+.cart-col-2 {
+  width: 10%;
+}
+.cart-col-3 {
+  width: 15%;
+}
+.cart-col-4 {
+  width: 15%;
+}
+.cart-col-1 p {
+  font-size: 14px;
+  color: var(--gray-color);
+}
+.cart-data h5.price {
+  font-size: 14px;
+  color: var(--head-color);
+}
+
+.buttonOfContinue {
+  background-color: var(--background-nav);
+  color: var(--active-color);
+  padding: 15px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  box-shadow: 0 0 10px var(--background-nav),
+    inset 0 0 10px var(--background-nav);
+}
+
+.buttonOfContinue:hover {
+  animation: a 0.5s 1 linear;
+}
+
+@keyframes a {
+  0% {
+    transform: scale(0.7, 1.3);
+  }
+
+  25% {
+    transform: scale(1.3, 0.7);
+  }
+
+  50% {
+    transform: scale(0.7, 1.3);
+  }
+
+  75% {
+    transform: scale(1.3, 0.7);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* Checkout */
+
+.checkout-wrapper {
+  background-color: #e4e4e4;
+}
+.checkout-wrapper select {
+  background-color: #f3f3f3;
+}
+.checkout-wrapper .input-contact {
+  color: gray;
+}
+.checkout-wrapper .total {
+  font-size: 14px;
+  color: var(--head-color);
+}
+.checkout-wrapper .total-price {
+  font-size: 16px;
+  color: var(--gray-color);
+}
+.chexkCardP:not(:last-child) {
+  padding-bottom: 21px;
+  margin-bottom: 21px;
+}
+
+.applyCoupon {
+  width: 10em;
+  position: relative;
+  height: 42px;
+  border: 3px ridge var(--active-color);
+  outline: none;
+  background-color: transparent;
+  color: var(--active-color);
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.applyCoupon::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: transparent;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.applyCoupon::before {
+  content: '';
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.applyCoupon:hover::before,
+.applyCoupon:hover::after {
+  transform: scale(0);
+}
+
+.applyCoupon:hover {
+  box-shadow: inset 0px 0px 25px var(--active-color);
+}

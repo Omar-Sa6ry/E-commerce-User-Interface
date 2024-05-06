@@ -1,0 +1,14 @@
+.single-blog .single-blog-card .title {
+  color: var(--head-color);
+  font-weight: 600;
+  font-size: 24px;
+}
+.single-blog .single-blog-card p {
+  color: var(--gray-color);
+  font-size: 14px;
+}
+.single-blog a {
+  color: var(--gray-color);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
